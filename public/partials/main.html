@@ -1,0 +1,81 @@
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="#" class="site_title"><i class="fa fa-paw"></i> <span>Index</span></a>
+                </div>
+                <div class="clearfix"></div>
+                <br />
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <ul class="nav side-menu">
+                            <li class="active">
+                                <a href="#/list"><i class="fa fa-home"></i> 新鲜事 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
+            </div>
+        </div>
+        <div top-nav></div>
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel add-item">
+                        <div class="x_title">
+                            <h2>分享一下新鲜事儿~</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <form class="form-horizontal form-label-left input_mask">
+                                <textarea required="required" class="form-control" ng-model="addItem.newInfo.text"></textarea>
+                                <div class="ln_solid"></div>
+                                <div class="form-group pull-right">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-success" ng-click="addItem.pub()" ng-class="{'disabled':addItem.newInfo.text==''}">发布</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--end add new item-->
+                    <div class="x_panel">
+                        <div class="x_content">
+                            <div class="dashboard-widget-content">
+                                <ul class="list-unstyled timeline widget">
+                                    <li ng-repeat="item in lists">
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <h2 class="title">
+                                                    <a>{{item.userName}}</a>
+                                                </h2>
+                                                <div class="byline">
+                                                    <span>{{item.pubTime}}</span>
+                                                </div>
+                                                <p class="excerpt">{{item.text}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer content -->
+            <footer>
+                <div class="copyright-info">
+                    <p class="pull-right">©2016 natee.</p>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+        <!-- /page content -->
+    </div>
+</div>

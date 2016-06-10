@@ -1,0 +1,21 @@
+<div id="wrapper">
+    <div id="login" class="animate form">
+        <section class="login_content">
+            <form>
+                <h1>登录</h1>
+                <div>
+                    <input type="text" class="form-control" placeholder="Username" id="username" ng-model="loginData.username" ng-class="{'parsley-error':error.usernameErr}" />
+                </div>
+                <div>
+                    <input type="password" class="form-control" placeholder="Password" id="pwd" ng-model="loginData.password" ng-class="{'parsley-error':error.pwdErr}" />
+                </div>
+                <div>
+                    <a class="btn btn-default" id="login" ng-click="login()">登录</a>
+                </div>
+                <div class="clearfix"></div>
+            </form>
+            <!-- form -->
+        </section>
+        <!-- content -->
+    </div>
+</div>
