@@ -34,7 +34,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-connect-proxy');
 
-    // 默认启动mc，合并
+    // 默认启动
     grunt.registerTask('default', ['configureProxies','connect:server']);
 
 };
